@@ -1,0 +1,38 @@
+Your current CV and placement plan is:
+
+1. **Professor-guided internship**
+
+   Build the backend of a real clinic-management system under the professor.
+
+   - Keep the scope controlled and interview-friendly.
+   - Implement authentication, role-based access, patient management, appointments, prescriptions, database design, validation, API testing and deployment.
+   - Use AI/vibe coding for the frontend, but understand and test it.
+   - Get an official internship certificate mentioning your role, duration and project.
+   - Try to obtain a personalised LOR.
+   - Put this in the **Experience/Internship** section of your CV.
+
+2. **One strong original project**
+
+   - Build it yourself and place it in the **Projects** section.
+   - It should demonstrate some skills different from the clinic project.
+   - Maintain a proper GitHub repository, README and preferably a live demo.
+
+3. **GitHub clone project**
+
+   - Do not add a directly copied clone to the CV.
+   - Either keep it only for learning or substantially modify it with original features.
+   - Clearly credit the original source.
+   - Don’t create a separate “Clone Projects” section.
+
+4. **DSA and placement preparation**
+
+   Continue NeetCode 150 topic-wise, currently focusing on binary search after completing sliding window, two pointers and heaps.
+
+So your ideal CV will contain:
+
+- **Experience:** Professor-guided clinic backend internship
+- **Projects:** One strong original project, and optionally one significantly extended project
+- **Skills and DSA achievements**
+- **Education**
+
+The most important rule: only mention features and metrics that you genuinely implemented and can explain deeply in an interview.

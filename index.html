@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Clinic - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="login-page">
+    <section class="login-card">
+      <div class="clinic-heading">
+        <p class="clinic-label">Smart Clinic</p>
+        <h1>Staff Login</h1>
+        <p>Sign in to manage daily clinic work.</p>
+      </div>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="role">Role</label>
+          <select id="role" name="role">
+            <option value="">Select your role</option>
+            <option value="owner">Owner</option>
+            <option value="doctor">Doctor</option>
+            <option value="receptionist">Receptionist</option>
+            <option value="chemist">Chemist</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" placeholder="Enter username">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Enter password">
+        </div>
+
+        <p id="loginMessage" class="login-message" aria-live="polite"></p>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <p class="demo-note">Demo login: <strong>clinic</strong> / <strong>1234</strong></p>
+    </section>
+  </main>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Clinic - Appointments</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div>
+      <p class="page-label">Smart Clinic</p>
+      <h1>Appointment Management</h1>
+    </div>
+    <a class="back-link" href="dashboard.html">Back to Dashboard</a>
+  </header>
+
+  <main class="appointment-page">
+    <section class="appointment-form-section">
+      <h2>Book an Appointment</h2>
+
+      <form id="appointmentForm" class="appointment-form" novalidate>
+        <div class="form-group">
+          <label for="appointmentPatient">Patient</label>
+          <select id="appointmentPatient">
+            <option value="">Select a patient</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="appointmentDoctor">Doctor</label>
+          <select id="appointmentDoctor">
+            <option value="">Loading doctors...</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="appointmentDate">Date</label>
+          <input id="appointmentDate" type="date">
+        </div>
+
+        <div class="form-group">
+          <label for="appointmentTime">Time</label>
+          <input id="appointmentTime" type="time">
+        </div>
+
+        <div class="form-group full-width">
+          <label for="appointmentReason">Reason</label>
+          <textarea id="appointmentReason" rows="3" placeholder="Enter the reason for the visit"></textarea>
+        </div>
+
+        <p id="appointmentMessage" class="appointment-message full-width" aria-live="polite"></p>
+
+        <div class="form-actions full-width">
+          <button type="submit">Book Appointment</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="appointment-list-section">
+      <h2>All Appointments</h2>
+
+      <div class="table-wrapper">
+        <table class="appointment-table">
+          <thead>
+            <tr>
+              <th>Patient</th>
+              <th>Doctor</th>
+              <th>Specialization</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Reason</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="appointmentTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/appointments.js"></script>
+</body>
+</html>

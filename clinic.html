@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Clinic - Clinic Services</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div>
+      <p class="page-label">Smart Clinic</p>
+      <h1>Clinic Services</h1>
+    </div>
+    <a class="back-link" href="dashboard.html">Back to Dashboard</a>
+  </header>
+
+  <nav class="clinic-section-nav" aria-label="Clinic sections">
+    <a href="#consultation">Doctor Consultation</a>
+    <a href="#inventory">Medicine Inventory</a>
+    <a href="#billing">Billing</a>
+  </nav>
+
+  <main class="clinic-page">
+    <section id="consultation" class="clinic-service-section">
+      <div class="service-heading">
+        <p>Section 1</p>
+        <h2>Doctor Consultation</h2>
+      </div>
+
+      <form id="consultationForm" class="clinic-form" novalidate>
+        <div class="form-group full-width">
+          <label for="consultationAppointment">Appointment</label>
+          <select id="consultationAppointment">
+            <option value="">Select an appointment</option>
+          </select>
+        </div>
+
+        <div id="consultationPatientDetails" class="consultation-patient-details full-width hidden">
+          <h3>Patient Details</h3>
+          <div class="patient-detail-grid">
+            <p><strong>Name:</strong> <span id="detailName">-</span></p>
+            <p><strong>Age:</strong> <span id="detailAge">-</span></p>
+            <p><strong>Gender:</strong> <span id="detailGender">-</span></p>
+            <p><strong>Blood Group:</strong> <span id="detailBloodGroup">-</span></p>
+            <p><strong>Allergies:</strong> <span id="detailAllergies">-</span></p>
+            <p><strong>Medical History:</strong> <span id="detailMedicalHistory">-</span></p>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="consultationDiagnosis">Diagnosis</label>
+          <textarea id="consultationDiagnosis" rows="3" placeholder="Enter diagnosis"></textarea>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="consultationPrescription">Prescription</label>
+          <textarea id="consultationPrescription" rows="3" placeholder="Enter prescription"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="consultationFollowUp">Follow-up Date</label>
+          <input id="consultationFollowUp" type="date">
+        </div>
+
+        <p id="consultationMessage" class="service-message full-width" aria-live="polite"></p>
+
+        <div class="form-actions full-width">
+          <button type="submit">Save Consultation</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="inventory" class="clinic-service-section">
+      <div class="service-heading">
+        <p>Section 2</p>
+        <h2>Medicine Inventory</h2>
+      </div>
+
+      <form id="medicineForm" class="clinic-form medicine-form" novalidate>
+        <div class="form-group">
+          <label for="medicineName">Medicine Name</label>
+          <input id="medicineName" type="text" placeholder="Enter medicine name">
+        </div>
+
+        <div class="form-group">
+          <label for="medicineStock">Stock</label>
+          <input id="medicineStock" type="number" min="0" placeholder="Enter stock">
+        </div>
+
+        <div class="form-group">
+          <label for="medicinePrice">Price</label>
+          <input id="medicinePrice" type="number" min="0" step="0.01" placeholder="Enter price">
+        </div>
+
+        <p id="medicineMessage" class="service-message full-width" aria-live="polite"></p>
+
+        <div class="form-actions full-width">
+          <button type="submit">Add Medicine</button>
+        </div>
+      </form>
+
+      <div class="table-wrapper service-table-wrapper">
+        <table class="service-table">
+          <thead>
+            <tr>
+              <th>Medicine Name</th>
+              <th>Stock</th>
+              <th>Price</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="medicineTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="billing" class="clinic-service-section">
+      <div class="service-heading">
+        <p>Section 3</p>
+        <h2>Billing</h2>
+      </div>
+
+      <form id="billingForm" class="clinic-form" novalidate>
+        <div class="form-group">
+          <label for="billMedicineSelect">Select Medicine</label>
+          <select id="billMedicineSelect">
+            <option value="">Select from inventory</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="billMedicineName">Or Enter Medicine</label>
+          <input id="billMedicineName" type="text" placeholder="Enter medicine name">
+        </div>
+
+        <div class="form-group">
+          <label for="billQuantity">Quantity</label>
+          <input id="billQuantity" type="number" min="1" placeholder="Enter quantity">
+        </div>
+
+        <div class="form-group">
+          <label for="billPrice">Price</label>
+          <input id="billPrice" type="number" min="0" step="0.01" placeholder="Enter price">
+        </div>
+
+        <p id="billingMessage" class="service-message full-width" aria-live="polite"></p>
+
+        <div class="form-actions full-width">
+          <button type="submit">Calculate Bill</button>
+        </div>
+      </form>
+
+      <div id="simpleBill" class="simple-bill hidden">
+        <h3>Simple Bill</h3>
+        <p><span>Medicine</span><strong id="billDisplayMedicine">-</strong></p>
+        <p><span>Quantity</span><strong id="billDisplayQuantity">-</strong></p>
+        <p><span>Price</span><strong id="billDisplayPrice">-</strong></p>
+        <p class="bill-total"><span>Total</span><strong id="billDisplayTotal">-</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/clinic.js"></script>
+</body>
+</html>

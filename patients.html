@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Clinic - Patients</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div>
+      <p class="page-label">Smart Clinic</p>
+      <h1>Patient Management</h1>
+    </div>
+    <a class="back-link" href="dashboard.html">Back to Dashboard</a>
+  </header>
+
+  <main class="patient-page">
+    <section class="patient-form-section">
+      <h2 id="formTitle">Add New Patient</h2>
+
+      <form id="patientForm" class="patient-form" novalidate>
+        <div class="form-group">
+          <label for="patientName">Name</label>
+          <input id="patientName" type="text" placeholder="Enter patient name">
+        </div>
+
+        <div class="form-group">
+          <label for="patientAge">Age</label>
+          <input id="patientAge" type="number" min="1" max="120" placeholder="Enter age">
+        </div>
+
+        <div class="form-group">
+          <label for="patientGender">Gender</label>
+          <select id="patientGender">
+            <option value="">Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="patientPhone">Phone</label>
+          <input id="patientPhone" type="tel" placeholder="Enter phone number">
+        </div>
+
+        <div class="form-group">
+          <label for="patientBloodGroup">Blood Group</label>
+          <select id="patientBloodGroup">
+            <option value="">Select blood group</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="patientAllergies">Allergies</label>
+          <input id="patientAllergies" type="text" placeholder="Enter allergies or None">
+        </div>
+
+        <div class="form-group full-width">
+          <label for="patientHistory">Medical History</label>
+          <textarea id="patientHistory" rows="3" placeholder="Enter brief medical history"></textarea>
+        </div>
+
+        <p id="patientMessage" class="patient-message full-width" aria-live="polite"></p>
+
+        <div class="form-actions full-width">
+          <button id="savePatientButton" type="submit">Add Patient</button>
+          <button id="cancelEditButton" class="secondary-button hidden" type="button">Cancel Edit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="patient-list-section">
+      <div class="patient-list-heading">
+        <h2>All Patients</h2>
+        <label class="search-box" for="patientSearch">
+          <span>Search by name or phone</span>
+          <input id="patientSearch" type="search" placeholder="Type to search">
+        </label>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="patient-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Phone</th>
+              <th>Blood Group</th>
+              <th>Allergies</th>
+              <th>Medical History</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="patientTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/patients.js"></script>
+</body>
+</html>

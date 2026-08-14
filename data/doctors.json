@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Ananya Sharma",
+    "specialization": "Dermatologist"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Rahul Mehta",
+    "specialization": "General Physician"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Priya Nair",
+    "specialization": "Pediatrician"
+  },
+  {
+    "id": 4,
+    "name": "Dr. Vikram Singh",
+    "specialization": "ENT Specialist"
+  }
+]
